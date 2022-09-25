@@ -35,6 +35,7 @@ namespace VeronikaKursova
                 PresentType = new Doll(),
                 Gender = Child.HumanGender.Women
             };
+            var child2 = _childCreator.CreateChildrean();
             label1.Text = children.ToString();
         }
     }
