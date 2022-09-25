@@ -10,7 +10,7 @@ public class Child
 
     public string Name { get; init; }
     public int Age { get; init; }
-    public HumanGender Gender { get; init; }
+    public string Gender { get; init; }
     public int GoodActionCount { get; init; }
     public int BadActionCount { get; init; }
 
@@ -28,7 +28,7 @@ public class Child
     public override string ToString()
     {
         return $"Name : {Name}\n\rAge : {Age}\n\rGender : {Gender}\n\r" +
-               $"Good Action C : {GoodActionCount}\n\rBad Action Count : {BadActionCount}\n\r" +
-               $"Present : {Present?.PresentName() ?? "no present"}\n\r";
+               $"Good Action Count : {GoodActionCount}\n\rBad Action Count : {BadActionCount}\n\r" +
+               $"Present : {Present?.ToString() ?? "no present"}\n\r";
     }
 }

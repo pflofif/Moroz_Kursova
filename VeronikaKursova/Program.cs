@@ -21,19 +21,19 @@ namespace VeronikaKursova
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var host = CreateHostBuilder().Build();
-            ServiceProvider = host.Services;
+            //var host = CreateHostBuilder().Build();
+            //ServiceProvider = host.Services;
 
-            Application.Run(ServiceProvider.GetRequiredService<Form1>());
+            Application.Run(new Form1());
         }
-        public static IServiceProvider ServiceProvider { get; private set; }
-        static IHostBuilder CreateHostBuilder()
-        {
-            return Host.CreateDefaultBuilder()
-                .ConfigureServices((_, services) => {
-                    services.AddTransient<IChildCreator, ChildCreator>();
-                    services.AddTransient<Form1>();
-                });
-        }
+        //public static IServiceProvider ServiceProvider { get; private set; }
+        //static IHostBuilder CreateHostBuilder()
+        //{
+        //    return Host.CreateDefaultBuilder()
+        //        .ConfigureServices((_, services) => {
+        //            services.AddTransient<IChildCreator, ChildCreator>();
+        //            services.AddTransient<Form1>();
+        //        });
+        //}
     }
 }

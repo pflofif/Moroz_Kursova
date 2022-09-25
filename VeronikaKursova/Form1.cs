@@ -6,11 +6,9 @@ namespace VeronikaKursova
 {
     public partial class Form1 : Form
     {
-        private readonly IChildCreator _childCreator;
 
-        public Form1(IChildCreator childCreator)
+        public Form1()
         {
-            _childCreator = childCreator;
             InitializeComponent();
         }
 
@@ -20,23 +18,27 @@ namespace VeronikaKursova
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            var children = new Child()
-            {
-                Name = "Veronika",
-                Age = 18,
-                BadActionCount = 0,
-                GoodActionCount = 100,
-                PresentType = new Doll(),
-                Gender = Child.HumanGender.Women
-            };
-            var child2 = _childCreator.CreateChildrean();
-            label1.Text = children.ToString();
+            //var children = new Child()
+            //{
+            //    Name = "Veronika",
+            //    Age = 18,
+            //    BadActionCount = 0,
+            //    GoodActionCount = 100,
+            //    PresentType = new Doll(),
+            //    Gender = Child.HumanGender.Women
+            //};
+            ChildrenCreateForm createChildren = new();
+            createChildren.ShowDialog();
+            var child = createChildren.ChildData;
+            //var name = createChildren.TextBox1.Name;
+            // var content = createChildren.TextBox1.Text;
+            label1.Text = child;
         }
     }
 }

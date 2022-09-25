@@ -2,5 +2,5 @@
 
 public class Rizka : Present
 {
-    public override string PresentName() => "Rizka ";
+    public override string ToString() => "Rizka ";
 }

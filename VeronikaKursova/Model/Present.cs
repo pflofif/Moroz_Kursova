@@ -2,5 +2,5 @@
 
 public class Present
 {
-    public virtual string PresentName() => "Some Present!";
+    public override string ToString() => "Some Present!";
 }

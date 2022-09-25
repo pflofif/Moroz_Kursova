@@ -13,11 +13,4 @@ public static class ReflectiveEnumerator
                 myType.IsClass && !myType.IsAbstract && myType.IsSubclassOf(typeof(T)))
             .Select(type => (T)Activator.CreateInstance(type, constructorArgs)!)!
             .ToList()!;
-
-    public static IEnumerable<FieldInfo> GetFields(Type type)
-    {
-        return type
-            .GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-        //.Where(f => f.GetCustomAttribute<CompilerGeneratedAttribute>() == null);
-    }
 }
