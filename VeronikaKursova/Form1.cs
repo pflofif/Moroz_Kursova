@@ -23,13 +23,15 @@ namespace VeronikaKursova
             ChildrenCreateForm createChildrenForm = new();
             createChildrenForm.ShowDialog();
             var child = createChildrenForm.childFromForm; // зчитування дитини з форми
+
             children.Add(child);                          // додавання дитини у список
             FillGrid();
         }
 
         public void FillGrid()
         {
-            foreach (var child in children)
+            var rowCount = dataGridView.RowCount;
+            foreach (var child in children.Skip(rowCount))
             {
                 int rowId = dataGridView.Rows.Add();
                 DataGridViewRow row = dataGridView.Rows[rowId];
@@ -45,7 +47,8 @@ namespace VeronikaKursova
         private void buttonYoungestChildrens_Click(object sender, EventArgs e)
         {
             //List<Child> youngestchildren = new List<Child>();
-            var minAge = children.MinBy(child=>child.Age).Age;
+
+            var minAge = children.MinBy(child => child.Age).Age;
             var youngestchildren = children.Where(child => child.Age == minAge).ToList();
             foreach (var child in youngestchildren)
             {
@@ -54,6 +57,15 @@ namespace VeronikaKursova
                 row.Cells[0].Value = child.Name;
                 row.Cells[1].Value = child.Age;
             }
+
+        }
+
+        private void readFromFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            const string path = @"C:\Users\Вероніка\source\repos\Moroz_Kursova\VeronikaKursova\children.json";
+            children.AddRange(FileWorker.ReadFromFile<List<Child>>(path));
+            // FileWorker.WriteToFile(path, children);
+            FillGrid();
         }
     }
 }

@@ -1,0 +1,35 @@
+[
+  {
+    "$type": "VeronikaKursova.Model.Child, VeronikaKursova",
+    "Name": "Valeria",
+    "Age": 3,
+    "Gender": "Woman",
+    "GoodActionCount": 1,
+    "BadActionCount": 2,
+    "PresentType": {
+      "$type": "VeronikaKursova.Model.Rizka, VeronikaKursova"
+    }
+  },
+  {
+    "$type": "VeronikaKursova.Model.Child, VeronikaKursova",
+    "Name": "Maria",
+    "Age": 10,
+    "Gender": "Woman",
+    "GoodActionCount": 11,
+    "BadActionCount": 10000,
+    "PresentType": {
+      "$type": "VeronikaKursova.Model.EatablePresents.Candy, VeronikaKursova"
+    }
+  },
+  {
+    "$type": "VeronikaKursova.Model.Child, VeronikaKursova",
+    "Name": "Max",
+    "Age": 12,
+    "Gender": "Male",
+    "GoodActionCount": 14,
+    "BadActionCount": 4,
+    "PresentType": {
+      "$type": "VeronikaKursova.Model.EatablePresents.Chocolate, VeronikaKursova"
+    }
+  }
+]

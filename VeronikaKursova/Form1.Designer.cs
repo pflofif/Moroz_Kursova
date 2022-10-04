@@ -39,6 +39,7 @@ namespace VeronikaKursova
             this.ColumnPresent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readFromFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.instractionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,6 +98,7 @@ namespace VeronikaKursova
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dataGridView.Size = new System.Drawing.Size(669, 360);
             this.dataGridView.TabIndex = 2;
+            //this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // ColumnName
             // 
@@ -173,6 +175,7 @@ namespace VeronikaKursova
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.readFromFileToolStripMenuItem,
             this.instractionsToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
@@ -180,21 +183,28 @@ namespace VeronikaKursova
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
+            // readFromFileToolStripMenuItem
+            // 
+            this.readFromFileToolStripMenuItem.Name = "readFromFileToolStripMenuItem";
+            this.readFromFileToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.readFromFileToolStripMenuItem.Text = "Read from file";
+            this.readFromFileToolStripMenuItem.Click += new System.EventHandler(this.readFromFileToolStripMenuItem_Click);
+            // 
             // instractionsToolStripMenuItem
             // 
             this.instractionsToolStripMenuItem.Name = "instractionsToolStripMenuItem";
-            this.instractionsToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.instractionsToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.instractionsToolStripMenuItem.Text = "Instractions";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(164, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -344,5 +354,6 @@ namespace VeronikaKursova
         private DataGridView dataGridViewYoungest;
         private DataGridViewTextBoxColumn ColumnNameYoungest;
         private DataGridViewTextBoxColumn ColumnAgeYoungest;
+        private ToolStripMenuItem readFromFileToolStripMenuItem;
     }
 }

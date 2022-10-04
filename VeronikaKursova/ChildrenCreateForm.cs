@@ -25,7 +25,7 @@ namespace VeronikaKursova
             InitDropList<Eateble>(comboBox1);
             InitDropList<Inedible>(comboBox2);
         }
-        public string ChildData => _newChild.ToString();
+       // public string ChildData => _newChild.ToString();
         public Child childFromForm => _newChild;
 
         private Child _newChild = null!;
