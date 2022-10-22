@@ -2,5 +2,5 @@
 
 public class Doll : Inedible
 {
-    public override string PresentName() => "ToyDoll ";
+    public override string ToString() => "Doll ";
 }

@@ -2,5 +2,5 @@
 
 public class Candy : Eateble
 {
-    public override string PresentName() => "Candy ";
+    public override string ToString() => "Candy ";
 }
