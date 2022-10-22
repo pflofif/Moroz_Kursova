@@ -29,14 +29,8 @@ namespace VeronikaKursova
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button button1;
+            this.buttonCreateChild = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnGoodActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnBadActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPresent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readFromFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,31 +39,38 @@ namespace VeronikaKursova
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createChildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteChildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonYoungestChildrens = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPresentCount = new System.Windows.Forms.DataGridView();
             this.ColumnPresentType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCountOfPresent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewYoungest = new System.Windows.Forms.DataGridView();
             this.ColumnNameYoungest = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAgeYoungest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            button1 = new System.Windows.Forms.Button();
+            this.ButtonDeleteChild = new System.Windows.Forms.Button();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnGoodActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBadActions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPresent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPresentCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYoungest)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonCreateChild
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            button1.Location = new System.Drawing.Point(443, 39);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(235, 50);
-            button1.TabIndex = 1;
-            button1.Text = "Create Child";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCreateChild.FlatAppearance.BorderSize = 0;
+            this.buttonCreateChild.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonCreateChild.Location = new System.Drawing.Point(132, 37);
+            this.buttonCreateChild.Name = "buttonCreateChild";
+            this.buttonCreateChild.Size = new System.Drawing.Size(270, 50);
+            this.buttonCreateChild.TabIndex = 1;
+            this.buttonCreateChild.Text = "Create Child";
+            this.buttonCreateChild.UseVisualStyleBackColor = false;
+            this.buttonCreateChild.Click += new System.EventHandler(this.buttonCreateChild_Click);
             // 
             // dataGridView
             // 
@@ -96,69 +97,8 @@ namespace VeronikaKursova
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 29;
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView.Size = new System.Drawing.Size(669, 360);
+            this.dataGridView.Size = new System.Drawing.Size(669, 414);
             this.dataGridView.TabIndex = 2;
-            //this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "Name";
-            this.ColumnName.MinimumWidth = 6;
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnName.Width = 125;
-            // 
-            // ColumnAge
-            // 
-            this.ColumnAge.HeaderText = "Age";
-            this.ColumnAge.MinimumWidth = 6;
-            this.ColumnAge.Name = "ColumnAge";
-            this.ColumnAge.ReadOnly = true;
-            this.ColumnAge.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnAge.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnAge.Width = 125;
-            // 
-            // ColumnGender
-            // 
-            this.ColumnGender.HeaderText = "Gender";
-            this.ColumnGender.MinimumWidth = 6;
-            this.ColumnGender.Name = "ColumnGender";
-            this.ColumnGender.ReadOnly = true;
-            this.ColumnGender.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnGender.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnGender.Width = 125;
-            // 
-            // ColumnGoodActions
-            // 
-            this.ColumnGoodActions.HeaderText = "Count of good actions";
-            this.ColumnGoodActions.MinimumWidth = 6;
-            this.ColumnGoodActions.Name = "ColumnGoodActions";
-            this.ColumnGoodActions.ReadOnly = true;
-            this.ColumnGoodActions.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnGoodActions.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnGoodActions.Width = 110;
-            // 
-            // ColumnBadActions
-            // 
-            this.ColumnBadActions.HeaderText = "Count of bad actions";
-            this.ColumnBadActions.MinimumWidth = 6;
-            this.ColumnBadActions.Name = "ColumnBadActions";
-            this.ColumnBadActions.ReadOnly = true;
-            this.ColumnBadActions.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnBadActions.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnBadActions.Width = 110;
-            // 
-            // ColumnPresent
-            // 
-            this.ColumnPresent.HeaderText = "Present";
-            this.ColumnPresent.MinimumWidth = 6;
-            this.ColumnPresent.Name = "ColumnPresent";
-            this.ColumnPresent.ReadOnly = true;
-            this.ColumnPresent.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnPresent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnPresent.Width = 110;
             // 
             // menuStrip1
             // 
@@ -168,7 +108,7 @@ namespace VeronikaKursova
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(902, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(962, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -186,31 +126,33 @@ namespace VeronikaKursova
             // readFromFileToolStripMenuItem
             // 
             this.readFromFileToolStripMenuItem.Name = "readFromFileToolStripMenuItem";
-            this.readFromFileToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.readFromFileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.readFromFileToolStripMenuItem.Text = "Read from file";
             this.readFromFileToolStripMenuItem.Click += new System.EventHandler(this.readFromFileToolStripMenuItem_Click);
             // 
             // instractionsToolStripMenuItem
             // 
             this.instractionsToolStripMenuItem.Name = "instractionsToolStripMenuItem";
-            this.instractionsToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.instractionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.instractionsToolStripMenuItem.Text = "Instractions";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createChildToolStripMenuItem});
+            this.createChildToolStripMenuItem,
+            this.deleteChildToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
@@ -218,39 +160,47 @@ namespace VeronikaKursova
             // createChildToolStripMenuItem
             // 
             this.createChildToolStripMenuItem.Name = "createChildToolStripMenuItem";
-            this.createChildToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.createChildToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.createChildToolStripMenuItem.Text = "Create child";
+            this.createChildToolStripMenuItem.Click += new System.EventHandler(this.buttonCreateChild_Click);
+            // 
+            // deleteChildToolStripMenuItem
+            // 
+            this.deleteChildToolStripMenuItem.Name = "deleteChildToolStripMenuItem";
+            this.deleteChildToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deleteChildToolStripMenuItem.Text = "Delete Child";
+            this.deleteChildToolStripMenuItem.Click += new System.EventHandler(this.ButtonDeleteChild_Click);
             // 
             // buttonYoungestChildrens
             // 
             this.buttonYoungestChildrens.CausesValidation = false;
             this.buttonYoungestChildrens.Location = new System.Drawing.Point(681, 39);
             this.buttonYoungestChildrens.Name = "buttonYoungestChildrens";
-            this.buttonYoungestChildrens.Size = new System.Drawing.Size(209, 50);
+            this.buttonYoungestChildrens.Size = new System.Drawing.Size(270, 50);
             this.buttonYoungestChildrens.TabIndex = 4;
             this.buttonYoungestChildrens.Text = "The yongest childrens";
             this.buttonYoungestChildrens.UseVisualStyleBackColor = true;
             this.buttonYoungestChildrens.Click += new System.EventHandler(this.buttonYoungestChildrens_Click);
             // 
-            // dataGridView2
+            // dataGridViewPresentCount
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dataGridView2.ColumnHeadersHeight = 28;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewPresentCount.AllowUserToAddRows = false;
+            this.dataGridViewPresentCount.AllowUserToDeleteRows = false;
+            this.dataGridViewPresentCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewPresentCount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewPresentCount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridViewPresentCount.ColumnHeadersHeight = 28;
+            this.dataGridViewPresentCount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnPresentType,
             this.ColumnCountOfPresent});
-            this.dataGridView2.Location = new System.Drawing.Point(681, 284);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(209, 166);
-            this.dataGridView2.TabIndex = 6;
+            this.dataGridViewPresentCount.Location = new System.Drawing.Point(681, 289);
+            this.dataGridViewPresentCount.Name = "dataGridViewPresentCount";
+            this.dataGridViewPresentCount.ReadOnly = true;
+            this.dataGridViewPresentCount.RowHeadersVisible = false;
+            this.dataGridViewPresentCount.RowHeadersWidth = 140;
+            this.dataGridViewPresentCount.RowTemplate.Height = 29;
+            this.dataGridViewPresentCount.Size = new System.Drawing.Size(270, 212);
+            this.dataGridViewPresentCount.TabIndex = 6;
             // 
             // ColumnPresentType
             // 
@@ -286,7 +236,7 @@ namespace VeronikaKursova
             this.dataGridViewYoungest.RowHeadersWidth = 51;
             this.dataGridViewYoungest.RowTemplate.Height = 48;
             this.dataGridViewYoungest.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewYoungest.Size = new System.Drawing.Size(209, 193);
+            this.dataGridViewYoungest.Size = new System.Drawing.Size(270, 193);
             this.dataGridViewYoungest.TabIndex = 7;
             // 
             // ColumnNameYoungest
@@ -305,16 +255,87 @@ namespace VeronikaKursova
             this.ColumnAgeYoungest.ReadOnly = true;
             this.ColumnAgeYoungest.Width = 125;
             // 
+            // ButtonDeleteChild
+            // 
+            this.ButtonDeleteChild.Location = new System.Drawing.Point(408, 37);
+            this.ButtonDeleteChild.Name = "ButtonDeleteChild";
+            this.ButtonDeleteChild.Size = new System.Drawing.Size(270, 50);
+            this.ButtonDeleteChild.TabIndex = 8;
+            this.ButtonDeleteChild.Text = "Delete Child";
+            this.ButtonDeleteChild.UseVisualStyleBackColor = true;
+            this.ButtonDeleteChild.Click += new System.EventHandler(this.ButtonDeleteChild_Click);
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.HeaderText = "Name";
+            this.ColumnName.MinimumWidth = 6;
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnName.Width = 125;
+            // 
+            // ColumnAge
+            // 
+            this.ColumnAge.HeaderText = "Age";
+            this.ColumnAge.MinimumWidth = 6;
+            this.ColumnAge.Name = "ColumnAge";
+            this.ColumnAge.ReadOnly = true;
+            this.ColumnAge.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnAge.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnAge.Width = 106;
+            // 
+            // ColumnGender
+            // 
+            this.ColumnGender.HeaderText = "Gender";
+            this.ColumnGender.MinimumWidth = 6;
+            this.ColumnGender.Name = "ColumnGender";
+            this.ColumnGender.ReadOnly = true;
+            this.ColumnGender.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnGender.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnGender.Width = 107;
+            // 
+            // ColumnGoodActions
+            // 
+            this.ColumnGoodActions.HeaderText = "Count of good actions";
+            this.ColumnGoodActions.MinimumWidth = 6;
+            this.ColumnGoodActions.Name = "ColumnGoodActions";
+            this.ColumnGoodActions.ReadOnly = true;
+            this.ColumnGoodActions.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnGoodActions.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnGoodActions.Width = 110;
+            // 
+            // ColumnBadActions
+            // 
+            this.ColumnBadActions.HeaderText = "Count of bad actions";
+            this.ColumnBadActions.MinimumWidth = 6;
+            this.ColumnBadActions.Name = "ColumnBadActions";
+            this.ColumnBadActions.ReadOnly = true;
+            this.ColumnBadActions.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnBadActions.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnBadActions.Width = 110;
+            // 
+            // ColumnPresent
+            // 
+            this.ColumnPresent.HeaderText = "Present";
+            this.ColumnPresent.MinimumWidth = 6;
+            this.ColumnPresent.Name = "ColumnPresent";
+            this.ColumnPresent.ReadOnly = true;
+            this.ColumnPresent.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnPresent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnPresent.Width = 110;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 453);
+            this.ClientSize = new System.Drawing.Size(962, 513);
+            this.Controls.Add(this.ButtonDeleteChild);
             this.Controls.Add(this.dataGridViewYoungest);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridViewPresentCount);
             this.Controls.Add(this.buttonYoungestChildrens);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(button1);
+            this.Controls.Add(this.buttonCreateChild);
             this.Controls.Add(this.menuStrip1);
             this.HelpButton = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -324,7 +345,7 @@ namespace VeronikaKursova
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPresentCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYoungest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -341,19 +362,22 @@ namespace VeronikaKursova
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem createChildToolStripMenuItem;
+        private Button buttonYoungestChildrens;
+        private DataGridView dataGridViewPresentCount;
+        private DataGridView dataGridViewYoungest;
+        private DataGridViewTextBoxColumn ColumnNameYoungest;
+        private DataGridViewTextBoxColumn ColumnAgeYoungest;
+        private ToolStripMenuItem readFromFileToolStripMenuItem;
+        private DataGridViewTextBoxColumn ColumnPresentType;
+        private DataGridViewTextBoxColumn ColumnCountOfPresent;
+        private ToolStripMenuItem deleteChildToolStripMenuItem;
+        private Button ButtonDeleteChild;
+        private Button buttonCreateChild;
         private DataGridViewTextBoxColumn ColumnName;
         private DataGridViewTextBoxColumn ColumnAge;
         private DataGridViewTextBoxColumn ColumnGender;
         private DataGridViewTextBoxColumn ColumnGoodActions;
         private DataGridViewTextBoxColumn ColumnBadActions;
         private DataGridViewTextBoxColumn ColumnPresent;
-        private Button buttonYoungestChildrens;
-        private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn ColumnPresentType;
-        private DataGridViewTextBoxColumn ColumnCountOfPresent;
-        private DataGridView dataGridViewYoungest;
-        private DataGridViewTextBoxColumn ColumnNameYoungest;
-        private DataGridViewTextBoxColumn ColumnAgeYoungest;
-        private ToolStripMenuItem readFromFileToolStripMenuItem;
     }
 }

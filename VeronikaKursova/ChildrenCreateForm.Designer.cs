@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxCountOfGoodAct = new System.Windows.Forms.TextBox();
+            this.textBoxCountOfBadAct = new System.Windows.Forms.TextBox();
             this.CreateChildButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.comboBoxEatablePresents = new System.Windows.Forms.ComboBox();
+            this.radioButtonEatable = new System.Windows.Forms.RadioButton();
+            this.radioButtonInedible = new System.Windows.Forms.RadioButton();
+            this.comboBoxInediblePresents = new System.Windows.Forms.ComboBox();
+            this.checkedListBoxSex = new System.Windows.Forms.CheckedListBox();
             this.numericAge = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericAge)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.AccessibleName = "NameTextBox";
-            this.textBox1.Location = new System.Drawing.Point(183, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Name";
-            this.textBox1.Size = new System.Drawing.Size(200, 27);
-            this.textBox1.TabIndex = 0;
+            this.textBoxName.AccessibleName = "NameTextBox";
+            this.textBoxName.Location = new System.Drawing.Point(183, 32);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.PlaceholderText = "Name";
+            this.textBoxName.Size = new System.Drawing.Size(200, 27);
+            this.textBoxName.TabIndex = 0;
             // 
-            // textBox3
+            // textBoxCountOfGoodAct
             // 
-            this.textBox3.AccessibleDescription = "";
-            this.textBox3.Location = new System.Drawing.Point(183, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Count of good actions";
-            this.textBox3.Size = new System.Drawing.Size(200, 27);
-            this.textBox3.TabIndex = 2;
+            this.textBoxCountOfGoodAct.AccessibleDescription = "";
+            this.textBoxCountOfGoodAct.Location = new System.Drawing.Point(183, 159);
+            this.textBoxCountOfGoodAct.Name = "textBoxCountOfGoodAct";
+            this.textBoxCountOfGoodAct.PlaceholderText = "Count of good actions";
+            this.textBoxCountOfGoodAct.Size = new System.Drawing.Size(200, 27);
+            this.textBoxCountOfGoodAct.TabIndex = 2;
             // 
-            // textBox4
+            // textBoxCountOfBadAct
             // 
-            this.textBox4.Location = new System.Drawing.Point(183, 226);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Count of bad actions";
-            this.textBox4.Size = new System.Drawing.Size(200, 27);
-            this.textBox4.TabIndex = 3;
+            this.textBoxCountOfBadAct.Location = new System.Drawing.Point(183, 226);
+            this.textBoxCountOfBadAct.Name = "textBoxCountOfBadAct";
+            this.textBoxCountOfBadAct.PlaceholderText = "Count of bad actions";
+            this.textBoxCountOfBadAct.Size = new System.Drawing.Size(200, 27);
+            this.textBoxCountOfBadAct.TabIndex = 3;
             // 
             // CreateChildButton
             // 
@@ -78,58 +78,62 @@
             this.CreateChildButton.UseVisualStyleBackColor = true;
             this.CreateChildButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // comboBoxEatablePresents
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(145, 298);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 28);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Eatable Presents";
+            this.comboBoxEatablePresents.FormattingEnabled = true;
+            this.comboBoxEatablePresents.Location = new System.Drawing.Point(145, 298);
+            this.comboBoxEatablePresents.Name = "comboBoxEatablePresents";
+            this.comboBoxEatablePresents.Size = new System.Drawing.Size(200, 28);
+            this.comboBoxEatablePresents.TabIndex = 6;
+            this.comboBoxEatablePresents.Text = "Eatable Presents";
             // 
-            // radioButton1
+            // radioButtonEatable
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(40, 302);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 24);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Eatable";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButtonEatable.AutoSize = true;
+            this.radioButtonEatable.Location = new System.Drawing.Point(40, 302);
+            this.radioButtonEatable.Name = "radioButtonEatable";
+            this.radioButtonEatable.Size = new System.Drawing.Size(80, 24);
+            this.radioButtonEatable.TabIndex = 7;
+            this.radioButtonEatable.TabStop = true;
+            this.radioButtonEatable.Text = "Eatable";
+            this.radioButtonEatable.UseVisualStyleBackColor = true;
+            this.radioButtonEatable.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // radioButtonInedible
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(40, 342);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 24);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inedible";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButtonInedible.AutoSize = true;
+            this.radioButtonInedible.Location = new System.Drawing.Point(40, 342);
+            this.radioButtonInedible.Name = "radioButtonInedible";
+            this.radioButtonInedible.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonInedible.TabIndex = 8;
+            this.radioButtonInedible.TabStop = true;
+            this.radioButtonInedible.Text = "Inedible";
+            this.radioButtonInedible.UseVisualStyleBackColor = true;
+            this.radioButtonInedible.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // comboBox2
+            // comboBoxInediblePresents
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 347);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(202, 28);
-            this.comboBox2.TabIndex = 9;
-            this.comboBox2.Text = "Inedible Presents";
+            this.comboBoxInediblePresents.Enabled = false;
+            this.comboBoxInediblePresents.FormattingEnabled = true;
+            this.comboBoxInediblePresents.Location = new System.Drawing.Point(143, 347);
+            this.comboBoxInediblePresents.Name = "comboBoxInediblePresents";
+            this.comboBoxInediblePresents.Size = new System.Drawing.Size(202, 28);
+            this.comboBoxInediblePresents.TabIndex = 9;
+            this.comboBoxInediblePresents.Text = "Inedible Presents";
             // 
-            // checkedListBox1
+            // checkedListBoxSex
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListBoxSex.CheckOnClick = true;
+            this.checkedListBoxSex.FormattingEnabled = true;
+            this.checkedListBoxSex.Items.AddRange(new object[] {
             "Male",
             "Woman"});
-            this.checkedListBox1.Location = new System.Drawing.Point(301, 83);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(84, 48);
-            this.checkedListBox1.TabIndex = 10;
+            this.checkedListBoxSex.Location = new System.Drawing.Point(301, 83);
+            this.checkedListBoxSex.Name = "checkedListBoxSex";
+            this.checkedListBoxSex.Size = new System.Drawing.Size(84, 48);
+            this.checkedListBoxSex.TabIndex = 10;
+            this.checkedListBoxSex.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
+            this.checkedListBoxSex.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxSex_SelectedIndexChanged);
             // 
             // numericAge
             // 
@@ -160,15 +164,15 @@
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericAge);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.checkedListBoxSex);
+            this.Controls.Add(this.comboBoxInediblePresents);
+            this.Controls.Add(this.radioButtonInedible);
+            this.Controls.Add(this.radioButtonEatable);
+            this.Controls.Add(this.comboBoxEatablePresents);
             this.Controls.Add(this.CreateChildButton);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxCountOfBadAct);
+            this.Controls.Add(this.textBoxCountOfGoodAct);
+            this.Controls.Add(this.textBoxName);
             this.Name = "ChildrenCreateForm";
             this.Text = "ChildrenCreateForm";
             ((System.ComponentModel.ISupportInitialize)(this.numericAge)).EndInit();
@@ -179,15 +183,15 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textBoxName;
+        private TextBox textBoxCountOfGoodAct;
+        private TextBox textBoxCountOfBadAct;
         private Button CreateChildButton;
-        private ComboBox comboBox1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private ComboBox comboBox2;
-        private CheckedListBox checkedListBox1;
+        private ComboBox comboBoxEatablePresents;
+        private RadioButton radioButtonEatable;
+        private RadioButton radioButtonInedible;
+        private ComboBox comboBoxInediblePresents;
+        private CheckedListBox checkedListBoxSex;
         private NumericUpDown numericAge;
         private Label label1;
     }

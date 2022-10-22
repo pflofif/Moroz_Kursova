@@ -11,11 +11,11 @@ namespace VeronikaKursova.Services
     {
         public static void WriteToFile<T>(string path, T collection)
         {
-            JsonSerializerSettings settings = new()
+            JsonSerializerSettings settings = new() 
             {
-                TypeNameHandling = TypeNameHandling.Objects
+                TypeNameHandling = TypeNameHandling.Objects     // запам'товування типів
             };
-            File.WriteAllText(path, JsonConvert.SerializeObject(collection, settings));
+            File.WriteAllText(path, JsonConvert.SerializeObject(collection, settings)); // переведення об'єктів в стрічку
         }
 
         public static T ReadFromFile<T>(string path)
@@ -24,7 +24,7 @@ namespace VeronikaKursova.Services
             {
                 TypeNameHandling = TypeNameHandling.Objects
             };
-            return JsonConvert.DeserializeObject<T>(File.ReadAllText(path), settings)!;
+            return JsonConvert.DeserializeObject<T>(File.ReadAllText(path), settings)!; // переведення стрічки в об'єкти
         }
     }
 }

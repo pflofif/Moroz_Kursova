@@ -7,7 +7,7 @@ public class Child
     public enum HumanGender
     {
         Male = 0,
-        Women = 1
+        Woman = 1
     }
 
     public string Name { get; init; }
