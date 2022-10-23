@@ -13,12 +13,13 @@ using VeronikaKursova.Model;
 using VeronikaKursova.Model.InediblePresents;
 using VeronikaKursova.Services;
 using VeronikaKursova.Model.EatablePresents;
+using VeronikaKursova.Services.Exceptions;
 
 namespace VeronikaKursova
 {
     public partial class ChildrenCreateForm : Form
     {
-       
+
         public ChildrenCreateForm()
         {
             InitializeComponent();
@@ -33,30 +34,23 @@ namespace VeronikaKursova
                 ? (Present?)comboBoxEatablePresents.SelectedItem
                 : (Present?)comboBoxInediblePresents.SelectedItem;
 
-            if (comboBoxEatablePresents.SelectedIndex>-1 || comboBoxInediblePresents.SelectedIndex>-1 && (checkedListBoxSex.CheckedItems.Count != 0))
+            try
             {
-                try
-                {
-                    ChildFromForm = new Child
-                        (
-                            textBoxName.Text,
-                            Convert.ToInt32(numericAge.Value),
-                            (string)checkedListBoxSex.SelectedItem,
-                            Convert.ToInt32(textBoxCountOfGoodAct.Text),
-                            Convert.ToInt32(textBoxCountOfBadAct.Text),
-                            present!
-                        );
-                    Close();
-                }
-                catch
-                {
-                    MessageBox.Show(@"Not all information is filled or you make mistake!
-Please, check if you fill each fields correctly.", "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                ChildFromForm = new Child
+                (
+                    textBoxName.Text,
+                    Convert.ToInt32(numericAge.Value),
+                    (string)checkedListBoxSex.SelectedItem,
+                    Convert.ToInt32(textBoxCountOfGoodAct.Text),
+                    Convert.ToInt32(textBoxCountOfBadAct.Text),
+                    present
+                );
+
+                Close();
             }
-            else
+            catch(Exception exp)
             {
-                MessageBox.Show("Not all information is filled or you made mistake!\nPlease, check if you fill each fields correctly.", "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exp.Rethrow<NotFullInfoException>().Message, "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -74,11 +68,18 @@ Please, check if you fill each fields correctly.", "Ops!", MessageBoxButtons.OK,
         }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            comboBoxInediblePresents.SelectedIndex                                      
-                = checkedListBoxSex.SelectedItem.Equals(Child.HumanGender.Woman.ToString()) // якщо дитина - дівчинка
-                    ? 0 // Doll index in SelectedList
-                    : 1;  // ToyCar index in selectedLIst     
+            try
+            {
+                comboBoxInediblePresents.SelectedIndex
+                    = checkedListBoxSex.SelectedItem.Equals(Child.HumanGender.Woman
+                        .ToString() ?? throw new NotFullInfoException()) // якщо дитина - дівчинка
+                        ? 0 // Doll index in SelectedList
+                        : 1; // ToyCar index in selectedLIst     
+            }
+            catch (Exception exp)
+            {
 
+            }
             radioButtonEatable.Enabled = false;
         }
 
@@ -90,7 +91,7 @@ Please, check if you fill each fields correctly.", "Ops!", MessageBoxButtons.OK,
 
         private void checkedListBoxSex_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
