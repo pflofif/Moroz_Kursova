@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VeronikaKursova.Model.EatablePresents.Candy" Collapsed="true">
+    <Position X="22.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EatablePresents\Candy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.EatablePresents.Chocolate" Collapsed="true">
+    <Position X="25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EatablePresents\Chocolate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.EatablePresents.Cookie" Collapsed="true">
+    <Position X="27.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EatablePresents\Cookie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.InediblePresents.Doll" Collapsed="true">
+    <Position X="31.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\InediblePresents\Doll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.InediblePresents.ToyCar" Collapsed="true">
+    <Position X="29.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\InediblePresents\ToyCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.Child" Collapsed="true">
+    <Position X="34.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABCAAEACAAQAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Model\Child.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.Eateble" Collapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Eateble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.Inedible" Collapsed="true">
+    <Position X="30.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Inedible.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.Present" Collapsed="true">
+    <Position X="26" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Present.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Model.Rizka" Collapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Rizka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Services.FileWorker" Collapsed="true">
+    <Position X="37.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Services\FileWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Services.ReflectiveEnumerator" Collapsed="true">
+    <Position X="37.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Services\ReflectionEnumarator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.ChildrenCreateForm" Collapsed="true">
+    <Position X="36" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EUAAAAQAACAAABAAgBCAAAgCAAAAAIAAADAABAAAhGg=</HashCode>
+      <FileName>ChildrenCreateForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Form1" Collapsed="true">
+    <Position X="34.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQ7EAUEgECAAAEZChgDQAIDCAAgIIAAEQAQAEAAAFIA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Program" Collapsed="true">
+    <Position X="36" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

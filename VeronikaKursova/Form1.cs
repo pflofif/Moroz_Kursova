@@ -1,6 +1,7 @@
 using VeronikaKursova.Model;
 using VeronikaKursova.Model.InediblePresents;
 using VeronikaKursova.Services;
+using VeronikaKursova.Services.Exceptions;
 
 
 namespace VeronikaKursova
@@ -34,7 +35,7 @@ namespace VeronikaKursova
             {
                 dataGridView.Rows.RemoveAt(children.IndexOf(childToFind));
                 children[children.IndexOf(childToFind)] = child;
-            }                 
+            }
             FillGrid();
             PresentCount();
         }
@@ -58,10 +59,9 @@ namespace VeronikaKursova
 
         private void buttonYoungestChildrens_Click(object sender, EventArgs e)
         {
-            if (children.Any())
+            try
             {
-                var minAge = children.MinBy(child => child.Age)!.Age;
-
+                int minAge = children.MinBy(child => child.Age)!.Age;
                 var youngestchildren = children.Where(child => child.Age == minAge).ToList();
                 foreach (var child in youngestchildren)
                 {
@@ -71,9 +71,10 @@ namespace VeronikaKursova
                     row.Cells[1].Value = child.Age;
                 }
             }
-            else
+
+            catch(Exception ex)
             {
-                MessageBox.Show("There are no childrens\nPlease, add child or read information from file.", "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Rethrow<NoChildrenException>().Message, "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -82,17 +83,17 @@ namespace VeronikaKursova
             const string path = @"C:\Users\Вероніка\source\repos\Moroz_Kursova\VeronikaKursova\children.json";
             List<Child> child = new List<Child>();
             child.AddRange(FileWorker.ReadFromFile<List<Child>>(path)); // FileWorker - клас, для роботи з json
-            for (int i = 0; i < child.Count; i++)
+            foreach (var ch in child)
             {
-                var childToFind = children.FirstOrDefault(c => c.Name == child[i].Name); // перевіряємо чи дитина з таким іменем існує
+                var childToFind = children.FirstOrDefault(c => c.Name == ch.Name); // перевіряємо чи дитина з таким іменем існує
                 if (childToFind is null) // якщо дитини в списку немає
                 {
-                    children.Add(child[i]);
+                    children.Add(ch);
                 }
                 else
                 {
                     dataGridView.Rows.RemoveAt(children.IndexOf(childToFind));
-                    children[children.IndexOf(childToFind)] = child[i];
+                    children[children.IndexOf(childToFind)] = ch;
                 }
             }
             FillGrid();
@@ -133,15 +134,15 @@ namespace VeronikaKursova
 
         private void ButtonDeleteChild_Click(object sender, EventArgs e)
         {
-            if (children.Any())
+            try
             {
                 children.RemoveAt(dataGridView.CurrentCell.RowIndex);
                 FillGrid();
                 PresentCount();
             }
-            else
+            catch (Exception exp)
             {
-                MessageBox.Show("There are no childrens\nPlease, add child or read information from file.", "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exp.Rethrow<NoChildrenException>().Message, "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
