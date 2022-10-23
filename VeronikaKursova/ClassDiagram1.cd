@@ -37,6 +37,13 @@
   </Class>
   <Class Name="VeronikaKursova.Model.Child" Collapsed="true">
     <Position X="34.25" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="VeronikaKursova.Model.Child.HumanGender" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Child.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABCAAEACAAQAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Model\Child.cs</FileName>
@@ -103,6 +110,34 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Services.Exceptions.EmptyFileException" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Exceptions\EmptyFileException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Services.Exceptions.ExceptionExtensions" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Exceptions\ExceptionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Services.Exceptions.NoChildrenException" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Exceptions\NoChildrenException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VeronikaKursova.Services.Exceptions.NotFullInfoException" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Exceptions\NotFullInfoException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

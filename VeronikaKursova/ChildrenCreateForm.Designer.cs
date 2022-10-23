@@ -133,7 +133,6 @@
             this.checkedListBoxSex.Size = new System.Drawing.Size(84, 48);
             this.checkedListBoxSex.TabIndex = 10;
             this.checkedListBoxSex.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
-            this.checkedListBoxSex.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxSex_SelectedIndexChanged);
             // 
             // numericAge
             // 

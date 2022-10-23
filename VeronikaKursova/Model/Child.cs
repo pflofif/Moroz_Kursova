@@ -38,7 +38,7 @@ public class Child
     {
         this.Name = Name;
         this.Age = Age;
-        this.Gender = Gender;
+        this.Gender = Gender ?? throw new NotGenderSelectException();
         this.GoodActionCount = GoodActionCount;
         this.BadActionCount = BadActionCount;
         this.PresentType = PresentType ?? throw new NotFullInfoException();

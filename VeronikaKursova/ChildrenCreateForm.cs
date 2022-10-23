@@ -48,7 +48,13 @@ namespace VeronikaKursova
 
                 Close();
             }
-            catch(Exception exp)
+            catch (NotGenderSelectException exp)
+            {
+                MessageBox.Show(exp.Message, "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                radioButtonInedible.Checked = false;
+                radioButtonEatable.Enabled = true;
+            }
+            catch (Exception exp)
             {
                 MessageBox.Show(exp.Rethrow<NotFullInfoException>().Message, "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -74,24 +80,19 @@ namespace VeronikaKursova
                     = checkedListBoxSex.SelectedItem.Equals(Child.HumanGender.Woman
                         .ToString() ?? throw new NotFullInfoException()) // якщо дитина - дівчинка
                         ? 0 // Doll index in SelectedList
-                        : 1; // ToyCar index in selectedLIst     
+                        : 1; // ToyCar index in selectedLIst
+                radioButtonEatable.Enabled = false;
             }
             catch (Exception exp)
             {
-
             }
-            radioButtonEatable.Enabled = false;
+
         }
 
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             for (int ix = 0; ix < checkedListBoxSex.Items.Count; ++ix)
                 if (ix != e.Index) checkedListBoxSex.SetItemChecked(ix, false);
-        }
-
-        private void checkedListBoxSex_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
