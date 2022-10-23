@@ -72,7 +72,7 @@ namespace VeronikaKursova
                 }
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Rethrow<NoChildrenException>().Message, "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -82,10 +82,22 @@ namespace VeronikaKursova
         {
             const string path = @"C:\Users\Вероніка\source\repos\Moroz_Kursova\VeronikaKursova\children.json";
             List<Child> child = new List<Child>();
-            child.AddRange(FileWorker.ReadFromFile<List<Child>>(path)); // FileWorker - клас, для роботи з json
+            try
+            {
+                child.AddRange(
+                    FileWorker.ReadFromFile<List<Child>>(path) // FileWorker - клас, для роботи з json
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Rethrow<EmptyFileException>().Message, "Ops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             foreach (var ch in child)
             {
-                var childToFind = children.FirstOrDefault(c => c.Name == ch.Name); // перевіряємо чи дитина з таким іменем існує
+                var childToFind =
+                    children.FirstOrDefault(c => c.Name == ch.Name); // перевіряємо чи дитина з таким іменем існує
                 if (childToFind is null) // якщо дитини в списку немає
                 {
                     children.Add(ch);
@@ -96,6 +108,8 @@ namespace VeronikaKursova
                     children[children.IndexOf(childToFind)] = ch;
                 }
             }
+
+
             FillGrid();
             PresentCount();
         }
